@@ -51,6 +51,20 @@ select city,count(*) from Employees group by city having count(*)>2;
 select department,sum(salary) from Employees group by department having sum(salary) >200000;
 select department , max(salary) group by department having max(salary)> 90000;
 
+-- TOP
+SELECT * FROM employees ORDER BY salary DESC limit 3;
+SELECT * FROM employees ORDER BY experience DESC limit 2;
+SELECT  * FROM employees WHERE department = 'Finance' ORDER BY salary DESC limit 3;
+SELECT * FROM employees WHERE city = 'Hyderabad' limit 4;
+SELECT  * FROM employees ORDER BY salary DESC limit 1;
+
+-- DISTINCT
+SELECT DISTINCT department FROM employees;
+SELECT DISTINCT city FROM employees;
+SELECT DISTINCT salary FROM employees;
+SELECT DISTINCT department, city FROM employees;
+SELECT DISTINCT experience FROM employees;
+
 #COMPARISON Operators
 select emp_name from Employees where salary>=80000;
 select emp_name from Employees where experience<=3;
